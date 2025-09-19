@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const Footer = () => {
   const YEAR = new Date().getFullYear();
 
@@ -26,7 +27,9 @@ export const Footer = () => {
 
           {/* Contacto */}
           <div className="text-zinc-700 md:col-span-2">
-            <h3 className="text-base sm:text-lg font-semibold text-emerald-800">Contacto</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-emerald-800">
+              Contacto
+            </h3>
             <ul className="mt-3 space-y-2 text-sm sm:text-base">
               <li className="flex items-center gap-3">
                 <svg
@@ -54,8 +57,16 @@ export const Footer = () => {
                   strokeWidth={2}
                   aria-hidden
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4h16v16H4z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M22 6l-10 7L2 6" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 4h16v16H4z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M22 6l-10 7L2 6"
+                  />
                 </svg>
                 <a
                   href="mailto:theboxcastellon@outlook.com"
@@ -69,7 +80,9 @@ export const Footer = () => {
 
           {/* Dirección */}
           <div className="text-zinc-700 md:col-span-1">
-            <h3 className="text-base sm:text-lg font-semibold text-emerald-800">Dirección</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-emerald-800">
+              Dirección
+            </h3>
             <address className="mt-3 not-italic text-sm sm:text-base leading-relaxed">
               C/ José Pascual Viciano 10N
               <br />
@@ -100,6 +113,14 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
+                <button
+                  onClick={() => (window as any).CookieConsent?.open?.()}
+                  className="text-sm hover:text-emerald-800"
+                >
+                  Gestionar cookies
+                </button>
+              </li>
+              <li>
                 <a
                   href="https://asdev.es"
                   target="_blank"
@@ -111,7 +132,9 @@ export const Footer = () => {
               </li>
             </ul>
           </nav>
-          <p className="text-center md:text-right text-sm text-zinc-600">© {YEAR} The Box Castellón</p>
+          <p className="text-center md:text-right text-sm text-zinc-600">
+            © {YEAR} The Box Castellón
+          </p>
         </div>
       </div>
 

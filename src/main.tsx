@@ -18,11 +18,16 @@ import { Contacto } from "./pages/contacto";
 import { AvisoLegal } from "./pages/legal/aviso-legal";
 import { PoliticaCookies } from "./pages/legal/politica-cookies";
 import { PoliticaPrivacidad } from "./pages/legal/politica-privacidad";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // App contiene <Layout> y <Outlet />
+    element: (
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    ), // App contiene <Layout> y <Outlet />
     children: [
       { index: true, element: <Home /> },
       { path: "nosotros", element: <Nosotros /> },
@@ -41,7 +46,7 @@ const router = createBrowserRouter([
 
       /* BOX */
       { path: "el-box", element: <ElBox /> },
-     /*  { path: "galeria", element: <Galeria /> }, */
+      /*  { path: "galeria", element: <Galeria /> }, */
 
       /* LEGAL */
       { path: "aviso-legal", element: <AvisoLegal /> },
