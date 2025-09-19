@@ -13,7 +13,7 @@ import { Psicologia } from "./pages/infinitum/psicologia";
 import { Vocabulario } from "./pages/filosofia/vocabulario";
 import { ReglasOldSchool } from "./pages/filosofia/reglas-old-school";
 import { ElBox } from "./pages/box/el-box";
-import { Galeria } from "./pages/box/galeria";
+/* import { Galeria } from "./pages/box/galeria"; */
 import { Contacto } from "./pages/contacto";
 import { AvisoLegal } from "./pages/legal/aviso-legal";
 import { PoliticaCookies } from "./pages/legal/politica-cookies";
