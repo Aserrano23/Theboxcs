@@ -1,69 +1,157 @@
-# React + TypeScript + Vite
+<p align="center">
+  <!-- Coloca el logo del cliente en public/logo.png o ajusta la ruta abajo -->
+  <img src="./public/logo.png" alt="Logo del cliente" width="120" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# The Box CS — Web App (React + TypeScript + Vite)
 
-Currently, two official plugins are available:
+Aplicación web creada con **React**, **TypeScript** y **Vite**. Este repositorio contiene el código base del proyecto **The Box CS**, con una configuración mínima y rápida para desarrollo moderno en frontend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Nota sobre el logo:** asegúrate de añadir el archivo del logo en `public/logo.png` (puedes cambiar la ruta si prefieres otra ubicación).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📑 Índice
+- [Características](#-características)
+- [Requisitos previos](#-requisitos-previos)
+- [Arranque rápido](#-arranque-rápido)
+- [Scripts disponibles](#-scripts-disponibles)
+- [Variables de entorno](#-variables-de-entorno)
+- [Estructura de carpetas](#-estructura-de-carpetas)
+- [Buenas prácticas y calidad](#-buenas-prácticas-y-calidad)
+- [Despliegue](#-despliegue)
+- [Contacto](#-contacto)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Características
+- ⚡️ **Vite** para desarrollo ultra-rápido y build optimizado.
+- 🧩 **React 18** con **TypeScript** para tipado estático.
+- ✅ Configuración de **ESLint** y reglas recomendadas para TS/React.
+- 🔥 HMR (Hot Module Replacement) para recarga instantánea en desarrollo.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧰 Requisitos previos
+- **Node.js** ≥ 18 (recomendado 20 LTS).
+- Gestor de paquetes: **npm**, **pnpm** o **yarn** (usa el que prefieras).
+
+Comprueba tu versión de Node:
+```bash
+node -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏁 Arranque rápido
+Clona el repositorio e instala dependencias. Elige **uno** de los gestores de paquetes y usa ese en todo el proyecto.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Con npm**
+```bash
+npm install
+npm run dev
 ```
+
+**Con pnpm**
+```bash
+pnpm install
+pnpm dev
+```
+
+**Con yarn**
+```bash
+yarn
+yarn dev
+```
+
+La app quedará disponible (por defecto) en **http://localhost:5173**.
+
+---
+
+## 📜 Scripts disponibles
+En `package.json` encontrarás los scripts más comunes. Equivalencias para cada gestor:
+
+**Desarrollo**
+```bash
+npm run dev
+# o pnpm dev
+# o yarn dev
+```
+
+**Build de producción**
+```bash
+npm run build
+# o pnpm build
+# o yarn build
+```
+
+**Previsualizar build**
+```bash
+npm run preview
+# o pnpm preview
+# o yarn preview
+```
+
+**Linter**
+```bash
+npm run lint
+# o pnpm lint
+# o yarn lint
+```
+
+> Si usas TypeScript estricto o reglas adicionales, revisa/ajusta `eslint.config.js` y `tsconfig*.json`.
+
+---
+
+## 🔐 Variables de entorno
+Si el proyecto necesita variables (APIs, claves públicas, etc.), crea un archivo `.env` en la raíz. Ejemplo:
+```env
+VITE_API_URL=https://api.ejemplo.com
+VITE_FEATURE_FLAG=true
+```
+> Las variables deben empezar por `VITE_` para ser accesibles en el cliente. Considera añadir un `.env.example` con las claves necesarias (sin valores sensibles).
+
+---
+
+## 🗂️ Estructura de carpetas
+_Ejemplo orientativo (puede variar según evolucione el proyecto):_
+```
+├─ public/
+│  ├─ logo.png            # Logo del cliente usado en el README
+│  └─ favicon.svg
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  ├─ pages/
+│  ├─ hooks/
+│  ├─ styles/
+│  ├─ App.tsx
+│  └─ main.tsx
+├─ index.html
+├─ package.json
+├─ tsconfig.app.json
+├─ tsconfig.node.json
+└─ README.md
+```
+
+---
+
+## 🧪 Buenas prácticas y calidad
+- Ejecuta `lint` antes de hacer commits para mantener un estilo consistente.
+- Usa **TypeScript** de forma estricta cuando sea posible para prevenir errores en tiempo de ejecución.
+- Considera añadir **Prettier** y un **pre-commit hook** (por ejemplo con Husky) si el proyecto lo requiere.
+
+---
+
+## ☁️ Despliegue
+El proyecto compila a estáticos que puedes servir en cualquier hosting.
+
+- **Vercel** / **Netlify**: selecciona este repo y usa el comando de build `npm run build`. Directorio de salida por defecto de Vite: `dist/`.
+- **Servidor propio**: ejecuta `npm run build` y sirve la carpeta `dist/` con Nginx/Apache o un servidor estático.
+
+---
+
+## 📬 Contacto
+**AsDev — Adrián Serrano**  
+📧 adrian@asdev.es  
+Si necesitas ayuda con la configuración o el despliegue, abre un issue o contacta por email.
