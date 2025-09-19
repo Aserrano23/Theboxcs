@@ -97,7 +97,7 @@ export const Info = () => {
             title="Reserva tus clases"
             desc="Organiza tu horario por internet y planea tus ejercicios para toda la semana."
             ctaLabel="Reservar ahora"
-            ctaHref="#reserva"
+            ctaHref="https://www.supersaas.es/schedule/BoxCastellon/Horarios"
           />
           <InfoPanel
             image={imgB}
@@ -105,7 +105,7 @@ export const Info = () => {
             title="Te preparamos"
             desc="Si tienes pensado presentarte a alguna competición de crossfit, nosotros te preparamos y asesoramos físicamente."
             ctaLabel="Contáctanos"
-            ctaHref="#contacto"
+            ctaHref="/contacto"
           />
         </div>
 

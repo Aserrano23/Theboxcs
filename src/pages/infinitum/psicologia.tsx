@@ -5,7 +5,7 @@ import imgHero from "../../assets/nutricion.webp";
 // --------- Tabla precios ---------
 
 type Row = { concepto: string; precio: string };
-const ROWS: Row[] = [{ concepto: "Sesión única", precio: "60,00€/sesión" }];
+const ROWS: Row[] = [{ concepto: "Sesión única", precio: "60,00€" }];
 
 function PriceTable({ rows }: { rows: Row[] }) {
   return (

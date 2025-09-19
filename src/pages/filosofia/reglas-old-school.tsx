@@ -122,7 +122,7 @@ export const ReglasOldSchool = () => {
 
       {/* CTA */}
       <Cta
-        title="Esta filosofía resuena contigo?"
+        title="¿Esta filosofía resuena contigo?"
         text="Hablemos y empecemos a trabajar juntos."
         btn1="Contactar"
         linkbtn1="/contacto"

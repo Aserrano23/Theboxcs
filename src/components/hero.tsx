@@ -56,7 +56,7 @@ export const Hero = () => {
               Reservar clase
             </a>
             <a
-              href="#contacto"
+              href="/contacto"
               className="inline-flex items-center rounded-lg border border-white/60 px-6 py-3 text-white text-base md:text-lg font-semibold hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               Contacta con nosotros

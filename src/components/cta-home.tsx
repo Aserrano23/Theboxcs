@@ -24,13 +24,14 @@ export const CtaHome = () => {
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#reserva"
+            href="https://www.supersaas.es/schedule/BoxCastellon/Horarios"
+            target="_blank"
             className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-emerald-900/20 ring-1 ring-emerald-500/30 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
           >
             Reserva tu horario
           </a>
           <a
-            href="#contacto"
+            href="/contacto"
             className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold text-white ring-1 ring-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             Consulta cualquier duda
