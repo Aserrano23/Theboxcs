@@ -29,10 +29,10 @@ export function DefaultSeo() {
   return (
     <Helmet>
       <html lang="es" />
-      <title>The Box Castellón — CrossFit & Entrenamiento</title>
+      <title>The Box Castellón — crosstraining & Entrenamiento</title>
       <meta
         name="description"
-        content="Entrena en The Box Castellón: CrossFit, fuerza y acondicionamiento. Planes a tu medida y servicios de nutrición y psicología con Infinitum Salud."
+        content="Entrena en The Box Castellón: crosstraining, fuerza y acondicionamiento. Planes a tu medida y servicios de nutrición y psicología con Infinitum Salud."
       />
       {canonical && <link rel="canonical" href={canonical} />}
 
@@ -40,14 +40,14 @@ export function DefaultSeo() {
       <meta property="og:site_name" content="The Box Castellón" />
       <meta property="og:type" content="website" />
       {canonical && <meta property="og:url" content={canonical} />}
-      <meta property="og:title" content="The Box Castellón — CrossFit & Entrenamiento" />
-      <meta property="og:description" content="Entrena en The Box Castellón: CrossFit, fuerza y acondicionamiento. Planes a tu medida." />
+      <meta property="og:title" content="The Box Castellón — crosstraining & Entrenamiento" />
+      <meta property="og:description" content="Entrena en The Box Castellón: crosstraining, fuerza y acondicionamiento. Planes a tu medida." />
       <meta property="og:image" content={SITE ? `${SITE.replace(/\/$/, "")}/og.jpg` : "/og.jpg"} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="The Box Castellón — CrossFit & Entrenamiento" />
-      <meta name="twitter:description" content="Entrena en The Box Castellón: CrossFit, fuerza y acondicionamiento. Planes a tu medida." />
+      <meta name="twitter:title" content="The Box Castellón — crosstraining & Entrenamiento" />
+      <meta name="twitter:description" content="Entrena en The Box Castellón: crosstraining, fuerza y acondicionamiento. Planes a tu medida." />
       <meta name="twitter:image" content={SITE ? `${SITE.replace(/\/$/, "")}/og.jpg` : "/og.jpg"} />
 
       {/* PWA tint */}

@@ -7,9 +7,9 @@ import { Home } from "./pages/home";
 import { Nosotros } from "./pages/nosotros";
 import { OldSchoolTraining } from "./pages/old-school-training";
 import Precios from "./pages/precios";
-import { EntrenamientoPersonal } from "./pages/infinitum/entrenamiento-personal";
+/* import { EntrenamientoPersonal } from "./pages/infinitum/entrenamiento-personal";
 import { Nutricion } from "./pages/infinitum/nutricion";
-import { Psicologia } from "./pages/infinitum/psicologia";
+import { Psicologia } from "./pages/infinitum/psicologia"; */
 import { Vocabulario } from "./pages/filosofia/vocabulario";
 import { ReglasOldSchool } from "./pages/filosofia/reglas-old-school";
 import { ElBox } from "./pages/box/el-box";
@@ -19,6 +19,7 @@ import { AvisoLegal } from "./pages/legal/aviso-legal";
 import { PoliticaCookies } from "./pages/legal/politica-cookies";
 import { PoliticaPrivacidad } from "./pages/legal/politica-privacidad";
 import { HelmetProvider } from "react-helmet-async";
+import Hymove from "./pages/hymove";
 
 const router = createBrowserRouter([
   {
@@ -31,16 +32,17 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "nosotros", element: <Nosotros /> },
-      { path: "old-school-training", element: <OldSchoolTraining /> },
       { path: "precios", element: <Precios /> },
       { path: "contacto", element: <Contacto /> },
+      { path: "hymove", element: <Hymove /> },
 
       /* INFINITUM */
-      { path: "entrenamiento-personal", element: <EntrenamientoPersonal /> },
+      /*  { path: "entrenamiento-personal", element: <EntrenamientoPersonal /> },
       { path: "nutricion", element: <Nutricion /> },
-      { path: "psicologia", element: <Psicologia /> },
+      { path: "psicologia", element: <Psicologia /> }, */
 
       /* FILOSOFIA */
+      { path: "old-school-training", element: <OldSchoolTraining /> },
       { path: "vocabulario", element: <Vocabulario /> },
       { path: "reglas-old-school-training", element: <ReglasOldSchool /> },
 

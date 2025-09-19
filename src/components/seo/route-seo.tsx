@@ -14,9 +14,9 @@ export function RouteSeo() {
   }> = [
     {
       match: /^\/$/,
-      title: "The Box Castellón | CrossFit en Castellón, fuerza y acondicionamiento",
+      title: "The Box Castellón | crosstraining en Castellón, fuerza y acondicionamiento",
       description:
-        "Box de CrossFit en Castellón. Entrenamientos de fuerza y acondicionamiento, comunidad y planificación a medida.",
+        "Box de crosstraining en Castellón. Entrenamientos de fuerza y acondicionamiento, comunidad y planificación a medida.",
     },
     {
       match: /^\/nosotros\/?$/,

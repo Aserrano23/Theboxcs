@@ -7,8 +7,9 @@ const LOGO_SRC = "/logo.png";
 const NAV: NavItem[] = [
   { label: "Nosotros", href: "/nosotros" },
   {
-    label: "Old School Training",
-    children: [
+    label: "HyMove",
+    href: "/hymove",
+    /*  children: [
       { label: "Ejercicio Físico", href: "/old-school-training" },
       {
         label: "Inifinitum",
@@ -21,16 +22,18 @@ const NAV: NavItem[] = [
           },
         ],
       },
-    ],
+    ], */
   },
   {
     label: "Filosofía",
     children: [
-      { label: "Vocabulario", href: "/vocabulario" },
+      { label: "Old School Training", href: "/old-school-training" },
+
       {
         label: "Reglas Old School Training",
         href: "/reglas-old-school-training",
       },
+      { label: "Vocabulario", href: "/vocabulario" },
     ],
   },
   {
@@ -81,11 +84,11 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 my-5 z-50 bg-white/90 backdrop-blur">
-      <div className="mx-auto max-w-7xl h-16 px-4 sm:px-6 lg:px-8 flex items-center">
+    <header className="sticky top-0 z-50 my-5 bg-white/90 backdrop-blur">
+      <div className="flex items-center h-16 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Hamburger (mobile) */}
         <button
-          className="md:hidden mr-8 inline-flex h-12 w-12 items-center justify-center rounded-md border border-zinc-300 hover:bg-zinc-50"
+          className="inline-flex items-center justify-center w-12 h-12 mr-8 border rounded-md md:hidden border-zinc-300 hover:bg-zinc-50"
           aria-label="Abrir menú"
           onClick={() => setOpen(true)}
         >
@@ -105,12 +108,12 @@ export function Navbar() {
 
         {/* Logo (left) */}
         <Link to="/" className="flex items-center gap-15">
-          <img src={LOGO_SRC} alt="The Box Castellón" className="h-15 w-auto" />
+          <img src={LOGO_SRC} alt="The Box Castellón" className="w-auto h-15" />
           <span className="sr-only">The Box Castellón</span>
         </Link>
 
         {/* Desktop links (right) */}
-        <ul className="ml-auto hidden md:flex items-center gap-8">
+        <ul className="items-center hidden gap-8 ml-auto md:flex">
           {NAV.map((item) => (
             <li key={item.label} className="relative group ">
               {item.children ? (
@@ -118,7 +121,7 @@ export function Navbar() {
                   <button className="inline-flex items-center gap-1 text-lg font-medium text-emerald-800 hover:text-emerald-900">
                     {item.label}
                     <svg
-                      className="h-4 w-4 opacity-80"
+                      className="w-4 h-4 opacity-80"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -132,17 +135,17 @@ export function Navbar() {
                         child.children ? (
                           <li
                             key={child.label}
-                            className="rounded-md px-3 py-2"
+                            className="px-3 py-2 rounded-md"
                           >
                             <div className="text-sm font-semibold text-zinc-900">
                               {child.label}
                             </div>
-                            <ul className="mt-1 pl-3 border-l border-zinc-200">
+                            <ul className="pl-3 mt-1 border-l border-zinc-200">
                               {child.children.map((grand) => (
                                 <li key={grand.label}>
                                   <NavLink
                                     to={grand.href!}
-                                    className="block rounded px-2 py-1 text-sm text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900"
+                                    className="block px-2 py-1 text-sm rounded text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900"
                                   >
                                     {grand.label}
                                   </NavLink>
@@ -154,7 +157,7 @@ export function Navbar() {
                           <li key={child.label}>
                             <NavLink
                               to={child.href!}
-                              className="block rounded-md px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900"
+                              className="block px-3 py-2 text-sm rounded-md text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900"
                             >
                               {child.label}
                             </NavLink>
@@ -199,7 +202,7 @@ export function Navbar() {
             }`}
           >
             {/* Top bar: logo left, close right */}
-            <div className="h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
               <Link
                 to="/"
                 className="flex items-center gap-3"
@@ -208,12 +211,12 @@ export function Navbar() {
                 <img
                   src={LOGO_SRC}
                   alt="The Box Castellón"
-                  className="h-15 w-auto"
+                  className="w-auto h-15"
                 />
                 <span className="sr-only">The Box Castellón</span>
               </Link>
               <button
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md hover:bg-zinc-100"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-zinc-100"
                 aria-label="Cerrar menú"
                 onClick={() => setOpen(false)}
               >
@@ -221,7 +224,7 @@ export function Navbar() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  className="h-8 w-8"
+                  className="w-8 h-8"
                 >
                   <path
                     strokeWidth="2"
@@ -234,15 +237,15 @@ export function Navbar() {
 
             {/* Centered big links */}
             <nav className="px-6 flex-1 grid place-items-center min-h-[calc(100svh-4rem)]">
-              <ul className="w-full max-w-md flex flex-col items-center gap-4">
+              <ul className="flex flex-col items-center w-full max-w-md gap-4">
                 {NAV.map((item) => (
                   <li key={`m-${item.label}`} className="w-full text-center">
                     {item.children ? (
                       <details className="group">
-                        <summary className="cursor-pointer list-none text-2xl sm:text-3xl font-semibold text-emerald-800 hover:text-emerald-900 inline-flex items-center gap-2 justify-center">
+                        <summary className="inline-flex items-center justify-center gap-2 text-2xl font-semibold list-none cursor-pointer sm:text-3xl text-emerald-800 hover:text-emerald-900">
                           {item.label}
                           <svg
-                            className="h-5 w-5 opacity-80 transition-transform duration-200 group-open:rotate-180"
+                            className="w-5 h-5 transition-transform duration-200 opacity-80 group-open:rotate-180"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                             aria-hidden="true"
@@ -255,10 +258,10 @@ export function Navbar() {
                             child.children ? (
                               <li key={`m-${child.label}`}>
                                 <details className="group/inner">
-                                  <summary className="cursor-pointer list-none text-lg font-medium text-emerald-800 inline-flex items-center gap-2 justify-center">
+                                  <summary className="inline-flex items-center justify-center gap-2 text-lg font-medium list-none cursor-pointer text-emerald-800">
                                     {child.label}
                                     <svg
-                                      className="h-4 w-4 opacity-80 transition-transform duration-200 group-open:rotate-180"
+                                      className="w-4 h-4 transition-transform duration-200 opacity-80 group-open:rotate-180"
                                       viewBox="0 0 20 20"
                                       fill="currentColor"
                                       aria-hidden="true"
@@ -299,7 +302,7 @@ export function Navbar() {
                       <NavLink
                         to={item.href!}
                         onClick={() => setOpen(false)}
-                        className="block text-2xl sm:text-3xl font-semibold text-emerald-800 hover:text-emerald-900"
+                        className="block text-2xl font-semibold sm:text-3xl text-emerald-800 hover:text-emerald-900"
                       >
                         {item.label}
                       </NavLink>

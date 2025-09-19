@@ -1,6 +1,7 @@
 import { CtaHome } from "../components/cta-home";
 import { Hero } from "../components/hero";
-import { InfinitumSection } from "../components/infinitum";
+import { HymoveSection } from "../components/hymove";
+/* import { InfinitumSection } from "../components/infinitum"; */
 import { Info } from "../components/info";
 
 export const Home = () => {
@@ -8,7 +9,8 @@ export const Home = () => {
     <>
       <Hero />
       <Info />
-      <InfinitumSection/>
+      <HymoveSection/>
+      {/* <InfinitumSection/> */}
       <CtaHome />
     </>
   );

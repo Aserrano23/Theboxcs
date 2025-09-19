@@ -137,7 +137,7 @@ export const Precios = () => {
         {/* Tiers */}
         <section className="py-12 md:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="sr-only">Planes de CrossFit</h2>
+            <h2 className="sr-only">Planes de crosstraining</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {TIERS.map((t) => (
                 <PriceCard key={t.name} tier={t} />
