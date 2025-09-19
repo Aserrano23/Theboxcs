@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -31,7 +31,7 @@ function saveConsent(c: Consent) {
 // --- UI Component ---
 
 export const PolicyModal = () => {
-  const [consent, setConsent] = useState<Consent | null>(null);
+  const [, setConsent] = useState<Consent | null>(null);
   const [bannerVisible, setBannerVisible] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [analytics, setAnalytics] = useState(false);
