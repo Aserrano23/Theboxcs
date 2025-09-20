@@ -183,7 +183,7 @@ export function Navbar() {
       {/* Mobile overlay rendered at body level to avoid transparency/stacking issues */}
       {createPortal(
         <div
-          className={`md:hidden mt-5 fixed inset-0 z-[999] ${
+          className={`md:hidden pt-5 fixed inset-0 z-[999] ${
             open ? "pointer-events-auto" : "pointer-events-none"
           }`}
           aria-hidden={!open}
@@ -202,7 +202,7 @@ export function Navbar() {
             }`}
           >
             {/* Top bar: logo left, close right */}
-            <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16 px-4 pt-10 sm:px-6 lg:px-8">
               <Link
                 to="/"
                 className="flex items-center gap-3"
