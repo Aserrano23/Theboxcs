@@ -6,37 +6,37 @@ export const ReglasOldSchool = () => {
   return (
     <main>
       {/* HERO con imagen de fondo */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative overflow-hidden isolate">
         {/* background image */}
         <img
           src={imgHero}
           alt="The Box Castellón"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 object-cover w-full h-full"
         />
         {/* dark overlay */}
         <div className="absolute inset-0 bg-zinc-950/50" />
         {/* vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center text-white">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+        <div className="relative px-4 py-16 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8 md:py-24">
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
             Old School Rules
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base sm:text-lg text-white/85">
+          <p className="max-w-3xl mx-auto mt-4 text-base sm:text-lg text-white/85">
             Reglas Old School Training — lo que pensamos, lo que decimos y lo
             que hacemos.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row">
             <Link
               to="https://www.supersaas.es/schedule/BoxCastellon/Horarios"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-emerald-900/20 ring-1 ring-emerald-500/30 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white shadow-lg rounded-xl bg-emerald-600 shadow-emerald-900/20 ring-1 ring-emerald-500/30 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
               Reserva tu clase
             </Link>
             <Link
               to="/contacto"
-              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold text-white ring-1 ring-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl ring-1 ring-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               Escríbenos
             </Link>
@@ -46,15 +46,15 @@ export const ReglasOldSchool = () => {
 
       {/* CONTENIDO */}
       <section className="py-12 md:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold md:text-3xl text-zinc-900">
             Reglas Old School Training
           </h2>
 
           {/* lista en dos columnas en desktop */}
-          <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-12">
+          <div className="grid gap-10 mt-8 md:grid-cols-2 md:gap-12">
             {/* Columna izquierda */}
-            <ol className="space-y-6 list-decimal pl-6 text-zinc-800">
+            <ol className="pl-6 space-y-6 list-decimal text-zinc-800">
               <li>Integridad, honor, compromiso, hacer lo correcto.</li>
               <li>Ser impecable con tu palabra.</li>
               <li>No chismear.</li>
@@ -64,7 +64,7 @@ export const ReglasOldSchool = () => {
               <li>Ser cortés.</li>
               <li>
                 Ser estricto en tu entrenamiento:
-                <ul className="mt-2 list-disc space-y-2 pl-5 text-sm text-zinc-700">
+                <ul className="pl-5 mt-2 space-y-2 text-sm list-disc text-zinc-700">
                   <li>Llevar el pecho al suelo en un push-up.</li>
                   <li>
                     Hacer un push-up real en tu burpee, no un empuje pélvico o
@@ -78,14 +78,14 @@ export const ReglasOldSchool = () => {
                   <li>No contar el wall ball si la pelota no toca la marca.</li>
                   <li>
                     Llevar la barbilla sobre la barra en un pull-up, no solo
-                    hasta ella (¡excepto en los butterflies!).
+                    hasta ella.
                   </li>
                 </ul>
               </li>
             </ol>
 
             {/* Columna derecha */}
-            <ol start={9} className="space-y-6 list-decimal pl-6 text-zinc-800">
+            <ol start={9} className="pl-6 space-y-6 list-decimal text-zinc-800">
               <li>
                 Enfrentar tus miedos, ya sea handstands, overhead squats, o el
                 cuco bajo tu cama.
