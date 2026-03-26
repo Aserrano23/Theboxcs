@@ -14,25 +14,31 @@ type Tier = {
 const TIERS: Tier[] = [
   {
     name: "MINI",
+    desc: "1 clase dirigida",
+    monthly: "35 € / mes",
+    quarterly: "125 € / trimestral",
+  },
+  {
+    name: "BÁSICA",
     desc: "2 clases dirigidas",
     monthly: "50 € / mes",
     quarterly: "135 € / trimestral",
   },
   {
-    name: "BÁSICA",
+    name: "MEDIUM",
     desc: "3 clases dirigidas",
     monthly: "60 € / mes",
     quarterly: "165 € / trimestral",
   },
   {
-    name: "MEDIUM",
+    name: "PREMIUM",
     desc: "4 clases dirigidas",
     monthly: "70 € / mes",
     quarterly: "190 € / trimestral",
     popular: true,
   },
   {
-    name: "PREMIUM",
+    name: "ILIMITADA",
     desc: "Clases dirigidas ilimitadas",
     monthly: "80 € / mes",
     quarterly: "220 € / trimestral",
@@ -138,7 +144,7 @@ export const Precios = () => {
         <section className="py-12 md:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="sr-only">Planes de crosstraining</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {TIERS.map((t) => (
                 <PriceCard key={t.name} tier={t} />
               ))}
