@@ -16,7 +16,7 @@ const TIERS: Tier[] = [
     name: "MINI",
     desc: "1 clase dirigida",
     monthly: "35 € / mes",
-    quarterly: "125 € / trimestral",
+    quarterly: "95 € / trimestral",
   },
   {
     name: "BÁSICA",
@@ -60,18 +60,18 @@ function PriceCard({ tier }: { tier: Tier }) {
       }`}
     >
       {tier.popular && (
-        <span className="absolute -top-3 right-4 rounded-full bg-emerald-700 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow">
+        <span className="absolute px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase rounded-full shadow -top-3 right-4 bg-emerald-700">
           Popular
         </span>
       )}
       <header className="flex items-baseline justify-between">
-        <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-zinc-900">
+        <h3 className="text-xl font-extrabold tracking-tight md:text-2xl text-zinc-900">
           {tier.name}
         </h3>
       </header>
       <p className="mt-2 text-sm text-zinc-700">{tier.desc}</p>
 
-      <div className="mt-5 grid gap-3">
+      <div className="grid gap-3 mt-5">
         <p className="text-2xl font-bold text-emerald-800">{tier.monthly}</p>
         <p className="text-lg font-semibold text-emerald-700/90">
           {tier.quarterly}
@@ -103,37 +103,37 @@ export const Precios = () => {
       <main>
         {/* HERO/Encabezado */}
 
-        <section className="relative isolate overflow-hidden">
+        <section className="relative overflow-hidden isolate">
           {/* background image */}
           <img
             src={imgHero}
             alt="The Box Castellón"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 object-cover w-full h-full"
           />
           {/* dark overlay */}
           <div className="absolute inset-0 bg-zinc-950/50" />
           {/* vignette */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
 
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center text-white">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+          <div className="relative px-4 py-16 mx-auto text-center text-white max-w-7xl sm:px-6 lg:px-8 md:py-24">
+            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Precios
             </h1>
-            <p className="mx-auto mt-4 max-w-3xl text-base sm:text-lg text-white/85">
+            <p className="max-w-3xl mx-auto mt-4 text-base sm:text-lg text-white/85">
               Planes claros y flexibles. Elige el ritmo que mejor encaja
               contigo.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row">
               <Link
                 to="/contacto"
                 target="_blank"
-                className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-emerald-900/20 ring-1 ring-emerald-500/30 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white shadow-lg rounded-xl bg-emerald-600 shadow-emerald-900/20 ring-1 ring-emerald-500/30 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               >
                 Reserva tu clase
               </Link>
               <Link
                 to="/contacto"
-                className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold text-white ring-1 ring-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl ring-1 ring-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Escríbenos
               </Link>
@@ -142,16 +142,16 @@ export const Precios = () => {
         </section>
         {/* Tiers */}
         <section className="py-12 md:py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className="sr-only">Planes de crosstraining</h2>
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {TIERS.map((t) => (
                 <PriceCard key={t.name} tier={t} />
               ))}
             </div>
 
             {/* Nota */}
-            <p className="mt-6 text-center text-sm text-zinc-600">
+            <p className="mt-6 text-sm text-center text-zinc-600">
               * Disponemos de una primera clase de prueba gratuita, para que
               decidas si esto es para ti o no.
             </p>
@@ -160,21 +160,21 @@ export const Precios = () => {
 
         {/* Bonos */}
         <section className="py-12 md:py-16 bg-zinc-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold md:text-3xl text-zinc-900">
               Bonos
             </h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="grid gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-2">
               {BONOS.map((b) => (
                 <article
                   key={b.name}
-                  className="rounded-2xl bg-white p-6 md:p-7 shadow-sm ring-1 ring-zinc-200"
+                  className="p-6 bg-white shadow-sm rounded-2xl md:p-7 ring-1 ring-zinc-200"
                 >
                   <div className="flex items-center gap-3 text-emerald-700">
-                    <span className="inline-grid h-10 w-10 place-items-center rounded-xl bg-emerald-50 ring-1 ring-emerald-200">
+                    <span className="inline-grid w-10 h-10 place-items-center rounded-xl bg-emerald-50 ring-1 ring-emerald-200">
                       <svg
                         viewBox="0 0 24 24"
-                        className="h-5 w-5"
+                        className="w-5 h-5"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth={2}
